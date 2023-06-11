@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --bg-pomodoro: #ba4949;
+  --bg-short-break: #38858a;
+  --bg-long-break: #397097;
+  --font-color: #ffffff;
+}
+
+.page-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  color: var(--font-color);
+  background-color: var(--bg-pomodoro);
+}
+
+.page-container {
+  width: 620px;
+  margin: 0 auto;
+}
