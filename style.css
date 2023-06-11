@@ -65,6 +65,7 @@
   border-radius: var(--br);
 }
 
+
 .timer-type-list {
   display: flex;
   justify-content: space-between;
@@ -73,18 +74,28 @@
 }
 
 .timer-type-item {
-  padding: 7px 14px;
   border-radius: var(br);
 }
 
-.timer-type-item:nth-child(n):checked { /* delete, because js */
-  background-color: var(--dark-pomodoros);
+.timer-type-item input[type=radio] {
+	display: none;
 }
 
 .timer-type-item-label {
+  display: inline-block;
+  padding: 7px 14px;
   font: var(--main-font);
+  border-radius: var(--br);
+	cursor: pointer;
+	user-select: none; 
 }
-            
+
+.timer-type-item input[type=radio]:checked + .timer-type-item-label {
+  font-weight: 500;
+	background-color: var(--dark-pomodoro);
+}
+       
+
 .timer {
   font: var(--title-font)
 }
