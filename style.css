@@ -73,9 +73,7 @@
   list-style: none;
 }
 
-.timer-type-item {
-  border-radius: var(br);
-}
+.timer-type-item {}
 
 .timer-type-item input[type=radio] {
 	display: none;
@@ -101,7 +99,7 @@
 }
 
 
-.btn-start {
+.button {
   width: 42%;
   padding: 20px;
   font: var(--subtitle-font);
@@ -111,6 +109,8 @@
   border-radius: var(--br);
   text-transform: uppercase;
 }
+
+.btn-start {}
 
 .tagline-section {
   display: flex;
