@@ -1,14 +1,18 @@
-const periodLength = 25;
+const periodsLength = {
+  pomodoro: 25,
+  shortBreak: 5,
+  longBreak: 15
+}
+
 const timer = document.querySelector(".timer");
 const button = document.querySelector(".button");
-const btnFinish =  document.querySelector(".btn-finish");
+
 
 let interval;
 
 function startTimer() {
   const minutesAndSeconds = timer.textContent.split(":");
   let distance = Number(minutesAndSeconds[0] * 60) + Number(minutesAndSeconds[1]) || "0";
-  console.log(distance);
   
   interval = setInterval(() => {
     if (distance < 1) {
@@ -28,6 +32,17 @@ function stopTimer() {
 }
 
 
-button.addEventListener("click", startTimer);
+function handleClick() {
+  if (button.classList.contains("pause")) {
+    button.textContent = "Continue";
+    stopTimer();
+    button.classList.remove("pause");
+  } else {
+    button.textContent = "Pause";
+    startTimer();
+    button.classList.add("pause");
+  }
+}
 
-btnFinish.addEventListener("click", stopTimer);
+
+button.addEventListener("click", handleClick);
