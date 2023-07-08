@@ -17,7 +17,6 @@
       <main class="main">
           <section class="timer-section">
           <form>
-
             <ul class="timer-type-list">
               <li class="timer-type-item">
                 <input type="radio" name="timer-type" id="pomodoro" value="pomodoro" checked>
@@ -25,23 +24,23 @@
               </li>
   
               <li class="timer-type-item">
-                <input type="radio" name="timer-type" id="short-break" value="short-break">
+                <input type="radio" name="timer-type" id="short-break" value="shortBreak">
                 <label for="short-break" class="timer-type-item-label">Short Break</label>
               </li>
               
               <li class="timer-type-item">
-                <input type="radio" name="timer-type" id="long-break" value="long-break">
+                <input type="radio" name="timer-type" id="long-break" value="longBreak">
                 <label for="long-break" class="timer-type-item-label">Long Break</label>
               </li>
             </ul>
-            
           </form>
+
           <p class="timer">25:00</p>
           <button class="button btn-start">Start</button>
         </section>
 
         <section class="tagline-section">
-          <p class="pomodoro-num">#1</p>
+          <p class="pomodoro-num-section">#<span class="pomodoro-num">1</span></p>
           <p class="tagline">Time to focus!</p>
         </section>
 
@@ -49,7 +48,9 @@
           <div class="task-title-container">
             <h2 class="task-title">Tasks</h2>
           </div>
-          <button class="btn-add-task">+ Add task</button>
+          <input class="btn-add-task input-new-task" type="text" name="" id="" placeholder="+ Add task">
+
+          <ul class="tasks-list"></ul>
         </section>
       </main>
 
@@ -57,5 +58,6 @@
   </div>
   
   <script src="./script.js"></script>
+  <script src="./todo-script.js"></script>
 </body>
 </html>

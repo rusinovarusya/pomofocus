@@ -60,7 +60,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 20px 24px 20px;
   background-color: var(--light-shadow-pomodoro);
   border-radius: var(--br);
 }
@@ -110,7 +110,14 @@
   text-transform: uppercase;
 }
 
-.btn-start {}
+.btn-start {
+  box-shadow: var(--light-pomodoro) 0px 4px 0px;
+}
+
+.play {
+  transform: translateY(4px);
+  box-shadow: none;
+}
 
 .tagline-section {
   display: flex;
@@ -120,7 +127,7 @@
   padding: 20px;
 }
 
-.pomodoro-num {
+.pomodoro-num-section {
   font: var(--main-font);
   text-align: center;
   color: var(--light-pomodoro);
@@ -153,4 +160,44 @@
   background-color: var(--dark-shadow-pomodoro);
   border: 2px dashed var(--light-pomodoro);
   border-radius: var(--br);
+}
+.btn-add-task::placeholder {
+  text-align: center;
+}
+.btn-add-task:focus {
+  border: 2px solid var(--light-pomodoro);
+  outline: none;
+}
+
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.task-item {
+  font: var(--main-font);
+  color: var(--font-color);
+}
+.task-item {
+  /* display: flex;
+  align-items: start;
+  gap: 10px;
+  font: var(--main-font);
+  color: var(--font-color); */
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1rem auto auto;
+  gap: 10px;
+  font: var(--main-font);
+  color: var(--font-color);
+}
+
+
+.btn-delete-task {
+  justify-self: right;
 }
