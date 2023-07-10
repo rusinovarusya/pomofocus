@@ -5,38 +5,44 @@
 }
 
 :root {
-  --bg-pomodoro: #ba4949;
-  --bg-short-break: #38858a;
-  --bg-long-break: #397097;
   --font-color: #ffffff;
   --br: 7px;
 
   --title-font: 700 5rem "Roboto", sans-serif;
   --subtitle-font: 500 1.1rem "Roboto", sans-serif;
   --main-font: 400 1rem "Roboto", sans-serif;
-
-  --dark-pomodoro: #a44e4e;
-  --light-pomodoro: #e3b6b6;
-  --dark-shadow-pomodoro: #ab4343;
-  --light-shadow-pomodoro: #c15c5c;
-
-  --dark-short-break: #417b80;
-  --light-short-break: #afced0;
-  --dark-shadow-short-break: #337a7f;
-  --light-shadow-short-break: #4c9196;
-
-  --dark-long-break: #426c8a;
-  --light-long-break: #b0c6d5;
-  --dark-shadow-long-break: #34678b;
-  --light-shadow-long-break: #4d7fa2;
-
 }
+
+.pomodoro {
+  --bg: #ba4949;
+  --dark-color: #a44e4e;
+  --light-color: #e3b6b6;
+  --dark-shadow: #ab4343;
+  --light-shadow: #c15c5c;
+}
+
+.shortBreak {
+  --bg: #38858a;
+  --dark-color: #417b80;
+  --light-color: #afced0;
+  --dark-shadow: #337a7f;
+  --light-shadow: #4c9196;
+}
+
+.longBreak {
+  --bg: #397097;
+  --dark-color: #426c8a;
+  --light-color: #b0c6d5;
+  --dark-shadow: #34678b;
+  --light-shadow: #4d7fa2;
+}
+
 
 .page-wrapper {
   width: 100vw;
   min-height: 100vh;
   color: var(--font-color);
-  background-color: var(--bg-pomodoro);
+  background-color: var(--bg);
 }
 
 .page-container {
@@ -48,7 +54,7 @@
 .header {
   padding: 20px 0;
   font: var(--subtitle-font);
-  box-shadow: 0 2px 0 0 var(--dark-pomodoro);
+  box-shadow: 0 2px 0 0 var(--dark-color);
 }
 
 .main {
@@ -61,7 +67,7 @@
   align-items: center;
   gap: 20px;
   padding: 20px 20px 24px 20px;
-  background-color: var(--light-shadow-pomodoro);
+  background-color: var(--light-shadow);
   border-radius: var(--br);
 }
 
@@ -90,7 +96,7 @@
 
 .timer-type-item input[type=radio]:checked + .timer-type-item-label {
   font-weight: 500;
-	background-color: var(--dark-pomodoro);
+  background-color: var(--dark-color);
 }
        
 
@@ -103,7 +109,7 @@
   width: 42%;
   padding: 20px;
   font: var(--subtitle-font);
-  color: var(--bg-pomodoro);
+  color: var(--bg);
   background-color: var(--font-color);
   border: 0;
   border-radius: var(--br);
@@ -111,7 +117,7 @@
 }
 
 .btn-start {
-  box-shadow: var(--light-pomodoro) 0px 4px 0px;
+  box-shadow: var(--light-color) 0px 4px 0px;
 }
 
 .play {
@@ -130,7 +136,7 @@
 .pomodoro-num-section {
   font: var(--main-font);
   text-align: center;
-  color: var(--light-pomodoro);
+  color: var(--light-color);
 }
 
 .tagline {
@@ -146,7 +152,7 @@
 
 .task-title-container {
   padding-bottom: 20px;
-  box-shadow: 0 2px 0 0 var(--light-pomodoro);
+  box-shadow: 0 2px 0 0 var(--light-color);
 }
 
 .task-title {
@@ -156,16 +162,16 @@
 .btn-add-task {
   padding: 20px;
   font: var(--subtitle-font);
-  color: var(--light-pomodoro);
-  background-color: var(--dark-shadow-pomodoro);
-  border: 2px dashed var(--light-pomodoro);
+  color: var(--light-color);
+  background-color: var(--dark-shadow);
+  border: 2px dashed var(--light-color);
   border-radius: var(--br);
 }
 .btn-add-task::placeholder {
   text-align: center;
 }
 .btn-add-task:focus {
-  border: 2px solid var(--light-pomodoro);
+  border: 2px solid var(--light-color);
   outline: none;
 }
 
@@ -184,11 +190,6 @@
   color: var(--font-color);
 }
 .task-item {
-  /* display: flex;
-  align-items: start;
-  gap: 10px;
-  font: var(--main-font);
-  color: var(--font-color); */
   display: grid;
   align-items: center;
   grid-template-columns: 1rem auto auto;

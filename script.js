@@ -16,6 +16,7 @@ const button = document.querySelector(".button");
 const pomodoroNum = document.querySelector(".pomodoro-num");
 const tagline = document.querySelector(".tagline");
 const timerTypeInputAll = document.querySelectorAll("input[name='timer-type']");
+const pageWrapper = document.querySelector(".page-wrapper");
 
 let interval;
 
@@ -84,6 +85,9 @@ function setMode(mode) {
   sessionStorage.setItem("mode", mode);
   timer.textContent = `${durations[mode]}:00`;
   tagline.textContent = taglines[mode];
+
+  pageWrapper.classList.remove(pageWrapper.classList[pageWrapper.classList.length - 1]);
+  pageWrapper.classList.add(mode);
 }
 
 
