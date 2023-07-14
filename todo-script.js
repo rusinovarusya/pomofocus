@@ -20,7 +20,6 @@ function createNewTask() {
   `<div class="task-item">
     <input type="checkbox" name="pomodoro-${document.querySelector(".pomodoro-num")}" id="${id}">
     <label for="${id}">${text}</label>
-    <button class="btn-delete-task">del</button>
   </div>`);
 
   inputNewTask.value = "";
